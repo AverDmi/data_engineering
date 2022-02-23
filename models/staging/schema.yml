@@ -8,6 +8,7 @@ sources:
       tables:
         - name: green_tripdata
         - name: yellow_tripdata
+        - name: external_fhv_data
 
 models:
     - name: stg_green_tripdata
@@ -192,3 +193,18 @@ models:
             description: Total amount of all tolls paid in trip.
           - name: Total_amount 
             description: The total amount charged to passengers. Does not include cash tips.
+    - name: stg_fhv_tripdata
+      description: Trips made fhv taxis 
+      columns:
+          - name: dispatching_base_num
+            description: Number of dispatching base.
+          - name: pickup_datetime
+            description: Date and time of passenger's pickup.
+          - name: dropoff_datetime
+            description: Date and time of passenger's dropoff.
+          - name: PULocationID
+            description: ID of location where passenger's trip start from.
+          - name: DOLocationID
+            description: ID of location where passenger's trip finish to.
+          - name: SR_Flag
+            description: Number of SR_Flag.
